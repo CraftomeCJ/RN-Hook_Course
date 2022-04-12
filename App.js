@@ -6,16 +6,16 @@ import { createStackNavigator } from "react-navigation-stack";
 import HomeScreen from "./src/screens/HomeScreen";
 //=> need list out 'relative path' to import the component
 import ComponentsScreen from "./src/screens/ComponentsScreen"; //<== import custom components
-//import ButtonExample from "./src/screens/ButtonExample";
+import ButtonExample from "./src/screens/ButtonExample";
 
 const navigator = createStackNavigator(
   {
     Home: HomeScreen,
-    Components: ComponentsScreen //<== add custom component to navigator
-  //Button: ButtonExample
+    Components: ComponentsScreen, //<== add custom component to navigator
+    Button: ButtonExample
   },
   {
-    initialRouteName: 'Components', //<== change to the component you want to display
+    initialRouteName: 'Button', //<== change to the component you want to display
     defaultNavigationOptions: {
       title: "App",
     },

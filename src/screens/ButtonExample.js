@@ -5,7 +5,7 @@ const Separator = () => (
   <View style={styles.separator} />
 );
 
-const App = () => (
+const ButtonExample = () => (
   <SafeAreaView style={styles.container}>
     <View>
       <Text style={styles.title}>
@@ -78,4 +78,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default ButtonExample;
