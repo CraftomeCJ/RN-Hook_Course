@@ -5,7 +5,7 @@
 // note ==> Part 1: import libraries we need to create a component
 import React from 'react'; //=> core component
 //import {userQuery} from 'react-query'//=>community component
-import {Text, View, StyleSheet, Button} from 'react-native'; //=> react native component
+import {Text, View, StyleSheet} from 'react-native'; //=> react native component
 //import MyComponent from ./myfilepath //=>native component
 
 /*

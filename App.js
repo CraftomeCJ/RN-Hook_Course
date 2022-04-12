@@ -1,21 +1,22 @@
 
 //import here to show on the screen
-
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 import HomeScreen from "./src/screens/HomeScreen";
 //=> need list out 'relative path' to import the component
 import ComponentsScreen from "./src/screens/ComponentsScreen"; //<== import custom components
 import ButtonExample from "./src/screens/ButtonExample";
+import JSXExercise from "./src/screens/JSXExercise";
 
 const navigator = createStackNavigator(
   {
     Home: HomeScreen,
     Components: ComponentsScreen, //<== add custom component to navigator
-    Button: ButtonExample
+    Button: ButtonExample,
+    JSXExercise: JSXExercise
   },
   {
-    initialRouteName: 'Button', //<== change to the component you want to display
+    initialRouteName: 'JSXExercise', //<== change to the component you want to display
     defaultNavigationOptions: {
       title: "App",
     },
