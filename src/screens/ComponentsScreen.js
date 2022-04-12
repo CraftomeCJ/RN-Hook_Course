@@ -96,4 +96,4 @@ const styles = StyleSheet.create({
 export default ComponentsScreen;
 //export default ViewBoxesWithColorAndText;
 
-//LEARN We have just create our FIRST COMPONENT file
+//LEARN 1. We have just create our FIRST COMPONENT file
