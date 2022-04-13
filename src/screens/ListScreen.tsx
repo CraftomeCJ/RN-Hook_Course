@@ -8,22 +8,39 @@ import {View, Text, StyleSheet, FlatList} from 'react-native';
 const ListScreen = () => {
   //below is an array of objects
   const friends = [
-    {name: 'Friend #1', age: 20, key: '1'},
-    {name: 'Friend #2', age: 21, key: '2'},
-    {name: 'Friend #3', age: 22, key: '3'},
-    {name: 'Friend #4', age: 23, key: '4'},
-    {name: 'Friend #5', age: 24, key: '5'},
-    {name: 'Friend #6', age: 25, key: '6'},
-    {name: 'Friend #7', age: 26, key: '7'},
-    {name: 'Friend #8', age: 27, key: '8'},
-    {name: 'Friend #9', age: 28, key: '9'},
-    {name: 'Friend #10', age: 29, key: '10'},
+    //note ways to solve 'key' issues
+  //method 1 we can use a 'key' prop and hard code every object in array => {name: 'Friend #1', age: 20, key: '1'},
+//important 'key' prop => must be unique and a 'string'
+
+    {name: 'Friend #1', age: 20,},
+    {name: 'Friend #2', age: 21,},
+    {name: 'Friend #3', age: 22,},
+    {name: 'Friend #4', age: 23,},
+    {name: 'Friend #5', age: 24,},
+    {name: 'Friend #6', age: 25,},
+    {name: 'Friend #7', age: 26,},
+    {name: 'Friend #8', age: 27,},
+    {name: 'Friend #9', age: 28,},
+    {name: 'Friend #10', age: 29,},
   ];
+
+  //note What is 'key' prop?
+  //React's key prop is something you need to put on elements when you map over an array (otherwise React will get mad at you).
+  //React's key prop gives you the ability to control component instances.
+  //Each time React renders your components, it's calling your functions to retrieve the new React elements that it uses to update the DOM. If you return the same element types, it keeps those components/DOM nodes around, even if all the props changed.
+  //learn this happens just as much for the state of native form elements (for things like value and even focus). The key prop isn't just for getting rid of that annoying React console error when I try to render an array of elements (all "annoying" errors from React are awesome and help you avoid bugs, so please do not ignore them). The key prop can also be a useful mechanism for controlling React component and element instances.
 
   return (
   <FlatList         //<== RN component
+
+  //method 2 we can use 'keyExtractor' prop in 'FlatList' component => keyExtractor={friend => friend.name}
+  //create a 'keyExtractor' and pass a function that is going to be called so many different times with a single argument 'friend'
+  //note it is used to extract a "Unique" key for a given item at a specified index. Useful when there are hundreds of items present in our list.
+  keyExtractor={friend => friend.name}
+
   //important props = 'data' ==> a plain array
   data={friends}    //<== pass in a Prop of data
+
   //important props = 'renderItem' ==> take an 'item' from 'data' and renders it into the list
   renderItem={({item}) => {  //pass in another Prop with arg
     // arg element will be like ===> {item: {name: 'Friend #1', age: 20}, index: 0}
