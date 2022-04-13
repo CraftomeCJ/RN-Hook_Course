@@ -32,6 +32,9 @@ const ListScreen = () => {
 
   return (
   <FlatList         //<== RN component
+  //note if you write horizontal prop in FlatList component => default it mean {true}. shorthand => horizontal
+  horizontal
+  showsHorizontalScrollIndicator={false}
 
   //method 2 we can use 'keyExtractor' prop in 'FlatList' component => keyExtractor={friend => friend.name}
   //create a 'keyExtractor' and pass a function that is going to be called so many different times with a single argument 'friend'
@@ -47,7 +50,7 @@ const ListScreen = () => {
     //while arg item will be like ===> {name: 'Friend #2', age: 21}
 
     return (
-    <Text>
+    <Text style={styles.textStyle}>
       {item.name} - Age {item.age}
     </Text>
     );
@@ -58,8 +61,12 @@ const ListScreen = () => {
 
 
 
-
-const styles = StyleSheet.create({});
+//note a few 'Props' around FlatList
+const styles = StyleSheet.create({
+  textStyle: {
+    marginVertical: 50 //<== 'marginVertical' Margin prop => Apply margin only to top and bottom side only
+  }
+});
 
 
 
