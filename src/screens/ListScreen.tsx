@@ -1,5 +1,4 @@
-//important default setup for component <== remember
-
+//important default setup (Boilerplate) for component
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 

@@ -7,16 +7,22 @@ import HomeScreen from "./src/screens/HomeScreen";
 import ComponentsScreen from "./src/screens/ComponentsScreen"; //<== import custom components
 import ButtonExample from "./src/screens/ButtonExample";
 import JSXExercise from "./src/screens/JSXExercise";
+import ViewBoxesWithColorAndText from "./src/screens/ViewBoxesWithColorAndText.tsx";
+import ListScreen from "./src/screens/ListScreen";
+
+
 
 const navigator = createStackNavigator(
   {
     Home: HomeScreen,
     Components: ComponentsScreen, //<== add custom component to navigator
     Button: ButtonExample,
-    JSXExercise: JSXExercise
+    JSXExercise: JSXExercise,
+    ViewBox: ViewBoxesWithColorAndText,
+    List: ListScreen //<== wire-up here
   },
   {
-    initialRouteName: 'JSXExercise', //<== change to the component you want to display
+    initialRouteName: 'List', //<== change to the component you want to display
     defaultNavigationOptions: {
       title: "App",
     },
