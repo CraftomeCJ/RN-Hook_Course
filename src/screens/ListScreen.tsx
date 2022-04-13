@@ -60,7 +60,6 @@ const ListScreen = () => {
 };
 
 
-
 //note a few 'Props' around FlatList
 const styles = StyleSheet.create({
   textStyle: {
