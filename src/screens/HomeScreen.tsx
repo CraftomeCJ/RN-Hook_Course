@@ -9,14 +9,17 @@ import { Text, StyleSheet, View, Button, TouchableOpacity} from 'react-native';
 //add in another prop ==> 'onPress={}' in to <Button> element
 //2. then need to use 'TouchableOpacity' to wrap the <Button> element with a default css fade-off animation
 //note TouchableOpacity is not a self close tag and it is a wrapper tag
-const HomeScreen = () => {
+//those in light blue are props
+const HomeScreen = (props: { navigation: { navigate: (arg0: string) => void; }; }) => {
+
+
   return (
   <View>
     <Text style={styles.text}>
       Hello world
     </Text>
     <Button
-    onPress={() => console.log('Button Pressed!')}
+    onPress={() => props.navigation.navigate('Components')}
     title='Go to component Demo'
     />
     <TouchableOpacity
@@ -57,4 +60,13 @@ note- *TouchableOpacity*
   - Opacity is controlled by wrapping the children in an 'Animated.View' ==> using the style property with an alpha channel, and animates alongside the layout changes of the wrapped view.
   - onPress - Handler to be call when user taps the button
   - style - can apply the custom styling.
+*/
+
+//LEARN Navigating with React Navigation
+/*
+                ====props aka properties=> HomeScreen
+React Navigation
+Stack Navigator ====props=> ListScreen
+
+                ====props=> ComponentsScreen
 */
