@@ -1,6 +1,6 @@
 //important default setup (Boilerplate) for component
 import React from 'react';
-import {View, Text, StyleSheet, FlatList} from 'react-native';
+import {Text, StyleSheet, FlatList} from 'react-native';
 //note FlatList
 // A performant interface for 'rendering' => basic, flat list, supporting handy features:
 //read RN documentation for more details
