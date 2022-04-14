@@ -4,14 +4,18 @@ import { Text, StyleSheet, View, Button} from 'react-native';
 
 //1. first need to show 'Button' on the screen
 //note <Button /> element is a self close component and
-//pass in a prop 'title' and assign a value to the prop ="Click Me"  ////<== this is the default value for the button
+//pass in a prop 'title' and assign a value to the prop ="Click Me" <== a rare case of without using curly braces  ////<== this is the default value for the button
+//add in another prop ==> 'onPress={}' in to <Button> element
 const HomeScreen = () => {
   return (
   <View>
     <Text style={styles.text}>
       Hello world
     </Text>
-    <Button title='Go to component Demo'/>
+    <Button
+    onPress={() => console.log('You tapped the button!')}
+    title='Go to component Demo'
+    />
   </View>
   );
 };
