@@ -10,6 +10,7 @@ import { Text, StyleSheet, View, Button, TouchableOpacity} from 'react-native';
 //2. then need to use 'TouchableOpacity' to wrap the <Button> element with a default css fade-off animation
 //note TouchableOpacity is not a self close tag and it is a wrapper tag
 //those in light blue are props
+//resolve error with infer parameter types from usage
 const HomeScreen = (props: { navigation: { navigate: (arg0: string) => void; }; }) => {
 
 
