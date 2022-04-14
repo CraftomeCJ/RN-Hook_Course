@@ -1,11 +1,14 @@
 import React from 'react';
-import { Text, StyleSheet, View, Button} from 'react-native';
+import { Text, StyleSheet, View, Button, TouchableOpacity} from 'react-native';
 //using 'View' to wrap the <Text> component
+//using 'TouchableOpacity' to warp the <Button> component and it is going to be used more frequently than 'Button'
 
 //1. first need to show 'Button' on the screen
 //note <Button /> element is a self close component and
 //pass in a prop 'title' and assign a value to the prop ="Click Me" <== a rare case of without using curly braces  ////<== this is the default value for the button
 //add in another prop ==> 'onPress={}' in to <Button> element
+//2. then need to use 'TouchableOpacity' to wrap the <Button> element with a default css fade-off animation
+//note TouchableOpacity is not a self close tag and it is a wrapper tag
 const HomeScreen = () => {
   return (
   <View>
@@ -13,9 +16,15 @@ const HomeScreen = () => {
       Hello world
     </Text>
     <Button
-    onPress={() => console.log('You tapped the button!')}
+    onPress={() => console.log('Button Pressed!')}
     title='Go to component Demo'
     />
+    <TouchableOpacity
+    onPress={() => console.log('You tapped the button!')}>
+    <Text>
+      Go to List Demo
+    </Text>
+      </TouchableOpacity>
   </View>
   );
 };
