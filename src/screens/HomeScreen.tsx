@@ -10,28 +10,37 @@ import { Text, StyleSheet, View, Button, TouchableOpacity} from 'react-native';
 //2. then need to use 'TouchableOpacity' to wrap the <Button> element with a default css fade-off animation
 //note TouchableOpacity is not a self close tag and it is a wrapper tag
 //those in light blue are props
-//resolve error with infer parameter types from usage
-const HomeScreen = (props: { navigation: { navigate: (arg0: string) => void; }; }) => {
+//temporary resolve error with
+// const HomeScreen = ({navigation}: {navigation: any}) => {
+//   return ...
+//  }
+/*doing this will make you lose type safety not advisable*/
 
+const HomeScreen = ({navigation}: {navigation: any}) => {
 
   return (
   <View>
     <Text style={styles.text}>
       Hello world
     </Text>
+
     <Button
-    onPress={() => props.navigation.navigate('Components')}
+    onPress={() => navigation.navigate('Components')}
     title='Go to component Demo'
     />
-    <TouchableOpacity
-    onPress={() => console.log('You tapped the button!')}>
-    <Text>
-      Go to List Demo
-    </Text>
-      </TouchableOpacity>
+
+    <Button
+    title="Go to List Demo"
+    onPress={() => navigation.navigate('FriendList')}
+    />
+
   </View>
   );
 };
+//note we can refactor <TouchableOpacity> element into <Button> for neater code
+//notice we no reference to the  'prop' argument inside our function, the 'prop' argument is to refer to navigation property so we can refactor by remove 'prop' argument and put in a set of (), a set of {}, and point to 'navigation'
+//note this is refer to Destructuring <==
+//will be using it quite frequently
 
 const styles = StyleSheet.create({
   text: {
