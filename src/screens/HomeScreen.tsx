@@ -1,3 +1,5 @@
+//todo Here's the location for Parent-component "imageScreen" which with Child-component "ImageDetails" mapped to it ==> to make it visible on device.
+
 import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native'
 import React from 'react'
 //using 'View' to wrap the <Text> component
