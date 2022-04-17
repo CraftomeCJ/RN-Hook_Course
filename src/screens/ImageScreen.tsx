@@ -5,12 +5,16 @@ import React from 'react'
 import ImageDetails from './../components/ImageDetails'
 
 //todo customize each  of the different image detail to show slightly different content
+//todo next is to pass some props from parent down to the child to customize how this child component display itself to show to the user
+//todo code to add image and add image file to assets folder
+
 const ImageScreen = () => {
   return (
 
     <View>
       {/* create a very unique custom props name called title */}
-      <ImageDetails ImageTitle = 'maple-tree'/>
+      <ImageDetails               ////<== self close tag for display image details
+      ImageTitle = 'maple-tree'/>
       <ImageDetails ImageTitle = 'freeway'/>
       <ImageDetails ImageTitle = 'cliffbythesea'/>
       <ImageDetails ImageTitle = 'mountaintop'/>
