@@ -1,5 +1,5 @@
-import React from 'react';
-import { Text, StyleSheet, View, Button, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native'
+import React from 'react'
 //using 'View' to wrap the <Text> component
 //using 'TouchableOpacity' to warp the <Button> component and it is going to be used more frequently than 'Button'
 
@@ -19,37 +19,79 @@ import { Text, StyleSheet, View, Button, TouchableOpacity} from 'react-native';
 const HomeScreen = ({navigation}: {navigation: any}) => {
 
   return (
-  <View>
-    <Text style={styles.text}>
-      Hello world
-    </Text>
+    <View>
+      <Text style={styles.styleHeader}>
+        Howdy!! This is my Home Screen
+      </Text>
 
-    <Button
-    onPress={() => navigation.navigate('Components')}
-    title='Go to component Demo'
-    />
+      <Button
+      title="Go to Component Demo"
+      onPress={() => navigation.navigate('Components')}
+      />
 
-    <Button
-    title="Go to List Demo"
-    onPress={() => navigation.navigate('FriendList')}
-    />
+      <Button
+      title="Go to List Demo"
+      onPress={() => navigation.navigate('List')}
+      />
 
-  </View>
-  );
-};
+      <Button
+      title="Go to Image Demo"
+      onPress={() => navigation.navigate('Image')}
+      />
+
+      <Button
+      title="Go to Table Demo"
+      onPress={() => navigation.navigate('Table')}
+      />
+
+      <Button
+      title="Go to Another List Demo"
+      onPress={() => navigation.navigate('AnotherList')}
+      />
+
+      <Button
+      title="Go to Grid View Demo"
+      onPress={() => navigation.navigate('GridView')}
+      />
+
+      <TouchableOpacity
+      onPress={() => navigation.navigate('Counter')}>
+        <Text style={styles.styleMain}>
+          Go to Counter Demo
+        </Text>
+      </TouchableOpacity>
+
+    </View>
+  )
+}
+
+export default HomeScreen
 //note we can refactor <TouchableOpacity> element into <Button> for neater code
 //notice we no reference to the  'prop' argument inside our function, the 'prop' argument is to refer to navigation property so we can refactor by remove 'prop' argument and put in a set of (), a set of {}, and point to 'navigation'
 //note this is refer to Destructuring <==
 //will be using it quite frequently
 
 const styles = StyleSheet.create({
-  text: {
-    fontSize: 30,
-    color: 'green'
+  styleHeader: {
+    marginVertical: 20,
+    fontSize: 40,
+    color: 'yellow',
+    backgroundColor: 'lightblue',
   },
-});
+  styleTouch: {
+    marginVertical: 15,
+    fontSize: 25,
+    color: 'blue',
+    backgroundColor: 'lightyellow',
+  },
+  styleMain: {
+    marginVertical: 10,
+    fontSize: 20,
+    color: 'orange',
+    backgroundColor: 'lightpink'
+  }
+})
 
-export default HomeScreen;
 
 
 //LEARN Button Types
