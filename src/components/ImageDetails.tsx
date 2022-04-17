@@ -1,10 +1,10 @@
 //todo create a new folder call components to keep all child components inside
 //todo Child Components to be mapped to ==> Parent 'HomeScreen.tsx'
 //todo  inside import statement and import a primitive component 'image'
-import { StyleSheet, Text, View, Image, FlatList } from 'react-native'
+import { StyleSheet, Text, View, Image, ImageRequireSource } from 'react-native'
 import React from 'react'
 
-const ImageDetails = ({imageSource, imageTitle, score}: {imageSource: any, imageTitle: string, score: number}): any => {
+const ImageDetails = ({imageSource, imageTitle, score}: {imageSource: ImageRequireSource, imageTitle: string, score: number}): any => {
   //console.log(props)
 
   /*learn this is the most commonly a reusable component with props */
