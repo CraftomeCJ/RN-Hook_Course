@@ -33,7 +33,7 @@ const ListScreen = () => {
   return (
   <FlatList         //<== RN component
   //note if you write horizontal prop in FlatList component => default it mean {true}. shorthand => horizontal
-  horizontal
+  //horizontal
   showsHorizontalScrollIndicator={false}
 
   //method 2 we can use 'keyExtractor' prop in 'FlatList' component => keyExtractor={friend => friend.name}

@@ -8,22 +8,60 @@ import ImageDetails from './../components/ImageDetails'
 //todo next is to pass some props from parent down to the child to customize how this child component display itself to show to the user
 //todo code to add image and add image file to assets folder
 
+//note
+/* create a very unique custom props name called title */
+/* 'ImageDetails => self close tag for display image details */
+////<== props title for description
+////<== 2nd props always use name make send to me & other developer
 const ImageScreen = () => {
   return (
 
     <View>
-      {/* create a very unique custom props name called title */}
-      <ImageDetails               ////<== self close tag for display image details
-      ImageTitle = 'maple-tree'/>
-      <ImageDetails ImageTitle = 'freeway'/>
-      <ImageDetails ImageTitle = 'cliffbythesea'/>
-      <ImageDetails ImageTitle = 'mountaintop'/>
-      <ImageDetails ImageTitle = 'sunset'/>
-      <ImageDetails ImageTitle = 'lakeview'/>
-      <ImageDetails ImageTitle = 'lonelytree'/>
-      <ImageDetails ImageTitle = 'mountainvalley'/>
-      <ImageDetails ImageTitle = 'swimmingpond'/>
-      <ImageDetails ImageTitle = 'mapleleafart'/>
+      <ImageDetails
+      imageTitle = 'maple-tree'
+      imageSource = {require('../../assets/maple-tree.jpg')}
+      score = {9}
+      />
+      <ImageDetails
+      imageTitle = 'freeway'
+      imageSource = {require('../../assets/freeway.jpg')}
+      score = {8}
+      />
+      <ImageDetails
+      imageTitle = 'cliffbythesea'
+      imageSource = {require('../../assets/cliffbythesea.jpg')}
+      score = {7}
+      />
+      <ImageDetails
+      imageTitle = 'mountaintop'
+      imageSource = {require('../../assets/mountaintop.jpg')}
+      score = {10}
+      />
+      {/* <ImageDetails
+      imageTitle = 'sunset'
+      imageSource = {require('../../assets/sunset.jpg')}
+      />
+      <ImageDetails
+      imageTitle = 'lakeview'
+      imageSource = {require('../../assets/lakeview.jpg')}
+      />
+      <ImageDetails
+      imageTitle = 'lonelytree'
+      imageSource = {require('../../assets/lonelytree.jpg')}
+      />
+      <ImageDetails
+      imageTitle = 'mountainvalley'
+      imageSource = {require('../../assets/mountainvalley.jpg')}
+      />
+      <ImageDetails
+      imageTitle = 'swimmingpond'
+      imageSource = {require('../../assets/swimmingpond.jpg')}
+      />
+      <ImageDetails
+      imageTitle = 'mapleleafart'
+      imageSource = {require('../../assets/mapleleafart.jpg')}
+      /> */}
+
     </View>
   )
 }
@@ -35,3 +73,10 @@ const styles = StyleSheet.create({})
 //learn Parent-Child relationship
 //todo same group of elements, repeated three times
 //todo we could repeat the same JSX three times over, or we could create a separate component
+
+//learn building reusable components exercise
+/*
+1. add a new prop to be passed from ImageScreen to ImageDetails
+2. this props should indicate a 'score' for the image. Make sure you give the prop an appropriate name!
+3. show the image score under the image in a new Text element
+*/
