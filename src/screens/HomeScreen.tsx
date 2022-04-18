@@ -23,7 +23,7 @@ const HomeScreen = ({navigation}: {navigation: any}) => {
   return (
     <View>
       <Text style={styles.styleHeader}>
-        Howdy!! This is my Home Screen
+        Good day!! This's Udemy's Course Home Screen
       </Text>
 
       <Button
