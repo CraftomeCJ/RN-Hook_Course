@@ -5,10 +5,11 @@ import HomeScreen from "./src/screens/HomeScreen";
 import ComponentsScreen from "./src/screens/ComponentsScreen";
 import ListScreen from "./src/screens/ListScreen";
 import ImageScreen from "./src/screens/ImageScreen";
-import CounterScreen from "./src/screens/CounterScreen";
-//import TableComponent from "./src/screens/TableComponent";
 import AnotherListScreen from "./src/screens/AnotherListScreen";
+import CounterScreen from "./src/screens/CounterScreen";
+import ColorScreen from "./src/screens/ColorScreen";
 //import GridViewListScreen from "./src/screens/GridViewListScreen";
+//import TableComponent from "./src/screens/TableComponent";
 
 const navigator = createStackNavigator(
   {
@@ -16,9 +17,10 @@ const navigator = createStackNavigator(
     Components: ComponentsScreen,
     List: ListScreen,
     Image: ImageScreen,
-    Counter: CounterScreen,
-    //Table: TableComponent,
     AnotherList: AnotherListScreen,
+    Counter: CounterScreen,
+    HookColor: ColorScreen,
+    //Table: TableComponent,
     //GridView: GridViewListScreen
 
   },

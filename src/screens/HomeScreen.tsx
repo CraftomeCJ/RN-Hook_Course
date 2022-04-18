@@ -41,10 +41,10 @@ const HomeScreen = ({navigation}: {navigation: any}) => {
       onPress={() => navigation.navigate('Image')}
       />
 
-      <Button
+      {/* <Button
       title="Go to Table Demo"
       onPress={() => navigation.navigate('Table')}
-      />
+      /> */}
 
       <Button
       title="Go to Another List Demo"
@@ -52,9 +52,14 @@ const HomeScreen = ({navigation}: {navigation: any}) => {
       />
 
       <Button
+      title="Go to Hook's Color Demo"
+      onPress={() => navigation.navigate('HookColor')}
+      />
+
+      {/* <Button
       title="Go to Grid View Demo"
       onPress={() => navigation.navigate('GridView')}
-      />
+      /> */}
 
       <TouchableOpacity
       onPress={() => navigation.navigate('Counter')}>
