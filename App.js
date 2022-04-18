@@ -8,6 +8,7 @@ import ImageScreen from "./src/screens/ImageScreen";
 import AnotherListScreen from "./src/screens/AnotherListScreen";
 import CounterScreen from "./src/screens/CounterScreen";
 import ColorScreen from "./src/screens/ColorScreen";
+import CarScreen from "./src/screens/CarScreen";
 //import GridViewListScreen from "./src/screens/GridViewListScreen";
 //import TableComponent from "./src/screens/TableComponent";
 
@@ -20,6 +21,7 @@ const navigator = createStackNavigator(
     AnotherList: AnotherListScreen,
     Counter: CounterScreen,
     HookColor: ColorScreen,
+    HookCar: CarScreen,
     //Table: TableComponent,
     //GridView: GridViewListScreen
 

@@ -56,6 +56,11 @@ const HomeScreen = ({navigation}: {navigation: any}) => {
       onPress={() => navigation.navigate('HookColor')}
       />
 
+      <Button
+      title="Go to Hook's Car Demo"
+      onPress={() => navigation.navigate('HookCar')}
+      />
+
       {/* <Button
       title="Go to Grid View Demo"
       onPress={() => navigation.navigate('GridView')}
