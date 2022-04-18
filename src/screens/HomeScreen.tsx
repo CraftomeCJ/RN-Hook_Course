@@ -41,11 +41,6 @@ const HomeScreen = ({navigation}: {navigation: any}) => {
       onPress={() => navigation.navigate('Image')}
       />
 
-      {/* <Button
-      title="Go to Table Demo"
-      onPress={() => navigation.navigate('Table')}
-      /> */}
-
       <Button
       title="Go to Another List Demo"
       onPress={() => navigation.navigate('AnotherList')}
@@ -61,10 +56,25 @@ const HomeScreen = ({navigation}: {navigation: any}) => {
       onPress={() => navigation.navigate('HookCar')}
       />
 
-      {/* <Button
+      <Button
+      title="Go to Hook's Counter Demo"
+      onPress={() => navigation.navigate('HookCounter')}
+      />
+
+      <Button
       title="Go to Grid View Demo"
       onPress={() => navigation.navigate('GridView')}
-      /> */}
+      />
+
+      <Button
+      title="Go to Table Component Demo"
+      onPress={() => navigation.navigate('Table')}
+      />
+
+      <Button
+      title="Go to Text Style Props Demo"
+      onPress={() => navigation.navigate('TextStyle')}
+      />
 
       <TouchableOpacity
       onPress={() => navigation.navigate('Counter')}>

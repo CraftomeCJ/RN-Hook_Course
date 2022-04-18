@@ -1,5 +1,5 @@
 //todo Here's the Parent-component location for ImageDetails
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React from 'react'
 //todo import the child imageDetails to parent here
 import ImageDetails from './../components/ImageDetails'
@@ -13,15 +13,17 @@ import ImageDetails from './../components/ImageDetails'
 /* 'ImageDetails => self close tag for display image details */
 ////<== props title for description
 ////<== 2nd props always use name make send to me & other developer
-const ImageScreen = () => {
+const ImageScreen = ({navigation}: {navigation: any}) => {
   return (
 
     <View>
+      <TouchableOpacity onPress={() => navigation.navigate('Counter')}>
       <ImageDetails
-      imageTitle = 'maple-tree'
-      imageSource = {require('../../assets/maple-tree.jpg')}
-      score = {9}
+      imageTitle = 'sunset'
+      imageSource = {require('../../assets/sunset.jpg')}
+      score = {10}
       />
+      </TouchableOpacity>
       <ImageDetails
       imageTitle = 'freeway'
       imageSource = {require('../../assets/freeway.jpg')}
