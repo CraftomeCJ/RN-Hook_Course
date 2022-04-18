@@ -1,6 +1,8 @@
 
-import { StyleSheet, Text, View } from 'react-native'
+import { FlatList, Platform, ScrollView, Slider, StatusBar, StyleSheet, Switch, Text, TouchableWithoutFeedback, View } from 'react-native'
 import React, {useState} from 'react'
+
+
 
 const TextStyleProps = () => {
   return (
