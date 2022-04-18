@@ -10,14 +10,18 @@ import React from 'react'
 const CounterScreen = () => {
   return (
     <View>
-      <Text>Learn useState Counter Screen</Text>
+      <Text style={styles.counterStyle}>CounterCurrent Count:</Text>
     </View>
   )
 }
 
 export default CounterScreen
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  counterStyle: {
+    fontSize: 30
+  }
+})
 
 //note Props ==> System to pass data from a parent to a child component
 //note State ==> System to track a piece of data that will change over time. If that data changes, our app will "rerender" the component.
