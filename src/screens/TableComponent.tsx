@@ -36,7 +36,7 @@ export default class TableComponent extends Component<any, any> {
             <Table>
               <Row
               data={state.tbHead}
-              //widths={state.widths} //bug
+              widths={state.widths} //bug
               style={styles.headerWrapper}
               textStyle={styles.text}/>
             </Table>

@@ -58,7 +58,7 @@ const HomeScreen = ({navigation}: {navigation: any}) => {
 
       <Button
       title="Go to Hook's Counter Demo"
-      onPress={() => navigation.navigate('HookCounter')}
+      onPress={() => navigation.navigate('Counter')}
       />
 
       <Button
@@ -96,19 +96,19 @@ export default HomeScreen
 const styles = StyleSheet.create({
   styleHeader: {
     marginVertical: 20,
-    fontSize: 40,
+    fontSize: 20,
     color: 'yellow',
     backgroundColor: 'lightblue',
   },
   styleTouch: {
     marginVertical: 15,
-    fontSize: 25,
+    fontSize: 16,
     color: 'blue',
     backgroundColor: 'lightyellow',
   },
   styleMain: {
     marginVertical: 10,
-    fontSize: 20,
+    fontSize: 16,
     color: 'orange',
     backgroundColor: 'lightpink'
   }

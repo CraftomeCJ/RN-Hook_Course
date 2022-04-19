@@ -7,7 +7,6 @@ import ListScreen from "./src/screens/ListScreen";
 import ImageScreen from "./src/screens/ImageScreen";
 import AnotherListScreen from "./src/screens/AnotherListScreen";
 import CounterScreen from "./src/screens/CounterScreen";
-import Counter from "./src/screens/Counter";
 import ColorScreen from "./src/screens/ColorScreen";
 import CarScreen from "./src/screens/CarScreen";
 import GridViewListScreen from "./src/screens/GridViewListScreen";
@@ -22,7 +21,6 @@ const navigator = createStackNavigator(
     Image: ImageScreen,
     AnotherList: AnotherListScreen,
     Counter: CounterScreen,
-    CounterScreen: Counter,
     HookColor: ColorScreen,
     HookCar: CarScreen,
     GridView: GridViewListScreen,
@@ -39,3 +37,5 @@ const navigator = createStackNavigator(
 );
 
 export default createAppContainer(navigator);
+
+

@@ -19,6 +19,7 @@
     "react-native-reanimated": "~2.3.1",
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "~3.10.1",
+    "react-native-table-component": "^1.2.2",
     "react-native-web": "0.17.1",
     "react-navigation": "^4.4.4",
     "react-navigation-stack": "^2.10.4"
@@ -28,7 +29,9 @@
     "@types/jest": "^27.4.1",
     "@types/react": "~17.0.21",
     "@types/react-native": "^0.67.4",
+    "@types/react-native-table-component": "^1.2.4",
     "@types/react-test-renderer": "^18.0.0",
+    "eslint": "^8.13.0",
     "jest": "^27.5.1",
     "typescript": "^4.6.3"
   },
