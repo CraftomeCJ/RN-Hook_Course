@@ -1,18 +1,33 @@
 //example of a Hook function
-import { StyleSheet, Text, View, Button } from 'react-native'
+import { StyleSheet, Text, View, Button, FlatList } from 'react-native'
 import React, {useState} from 'react'
 
 const HookColorScreen = () => {
-  const [color, setColor] = useState('')
+  const [color, setColor] = useState([]);
+  //console.log(color);
 
   //call the 'randomRgb' function here
   return (
     <View>
-      <Button title="Match Your Favourite Color" />
+      <Button
+      title="Click to View a Random Color"
+      onPress={() => {
+        setColor([...color, randomRgb()]);
+      }
+    }
+      />
       <View
-      style={{height: 100, width: 100, backgroundColor: randomRgb()}} />
+      style={{height: 100, width: 100, backgroundColor: randomRgb()}}
+      />
 
-      <Text style={styles.textHeader}>
+      <FlatList
+      keyExtractor={(item) => item}
+      data={color}
+      renderItem={({item}) => {
+        return <View style={{height: 100, width: 100, backgroundColor: item}} />
+      }}
+
+      {/* <Text style={styles.textHeader}>
         What is your favorite color?
         </Text>
         <Text style={styles.textParagraph}>
@@ -47,7 +62,7 @@ const HookColorScreen = () => {
         onPress={() => {
           setColor('')
         }}
-      />
+      /> */}
     </View>
   )
 }
