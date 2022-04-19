@@ -7,6 +7,7 @@ const HookColorScreen = () => {
 
   return (
     <View>
+      <Button title="Add s Color" />
       <Text style={styles.textHeader}>
         What is your favorite color?
         </Text>
