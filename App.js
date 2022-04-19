@@ -13,6 +13,7 @@ import GridViewListScreen from "./src/screens/GridViewListScreen";
 import TableComponent from "./src/screens/TableComponent";
 import TextStyleProps from "./src/screens/TextStyleProps";
 import RandomColorScreen from "./src/screens/RandomColorScreen";
+import RandomNumberScreen from "./src/screens/RandomNumberScreen";
 
 const navigator = createStackNavigator(
   {
@@ -27,7 +28,8 @@ const navigator = createStackNavigator(
     GridView: GridViewListScreen,
     Table: TableComponent,
     TextStyle: TextStyleProps,
-    RandomColor: RandomColorScreen
+    RandomColor: RandomColorScreen,
+    RandomNumber: RandomNumberScreen
 
   },
   {
