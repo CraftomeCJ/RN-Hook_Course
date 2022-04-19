@@ -76,6 +76,11 @@ const HomeScreen = ({navigation}: {navigation: any}) => {
       onPress={() => navigation.navigate('TextStyle')}
       />
 
+      <Button
+      title="Go to Random Color Demo"
+      onPress={() => navigation.navigate('RandomColor')}
+      />
+
       <TouchableOpacity
       onPress={() => navigation.navigate('Counter')}>
         <Text style={styles.styleMain}>

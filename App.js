@@ -12,6 +12,7 @@ import CarScreen from "./src/screens/CarScreen";
 import GridViewListScreen from "./src/screens/GridViewListScreen";
 import TableComponent from "./src/screens/TableComponent";
 import TextStyleProps from "./src/screens/TextStyleProps";
+import RandomColorScreen from "./src/screens/RandomColorScreen";
 
 const navigator = createStackNavigator(
   {
@@ -25,7 +26,8 @@ const navigator = createStackNavigator(
     HookCar: CarScreen,
     GridView: GridViewListScreen,
     Table: TableComponent,
-    TextStyle: TextStyleProps
+    TextStyle: TextStyleProps,
+    RandomColor: RandomColorScreen
 
   },
   {
@@ -37,5 +39,3 @@ const navigator = createStackNavigator(
 );
 
 export default createAppContainer(navigator);
-
-
