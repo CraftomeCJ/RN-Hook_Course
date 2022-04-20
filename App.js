@@ -1,19 +1,21 @@
-import { createAppContainer } from "react-navigation";
-import { createStackNavigator } from "react-navigation-stack";
 
-import HomeScreen from "./src/screens/HomeScreen";
-import ComponentsScreen from "./src/screens/ComponentsScreen";
-import ListScreen from "./src/screens/ListScreen";
-import ImageScreen from "./src/screens/ImageScreen";
-import AnotherListScreen from "./src/screens/AnotherListScreen";
-import CounterScreen from "./src/screens/CounterScreen";
-import ColorScreen from "./src/screens/ColorScreen";
-import CarScreen from "./src/screens/CarScreen";
-import GridViewListScreen from "./src/screens/GridViewListScreen";
-import TableComponent from "./src/screens/TableComponent";
-import TextStyleProps from "./src/screens/TextStyleProps";
-import RandomColorScreen from "./src/screens/RandomColorScreen";
-import RandomNumberScreen from "./src/screens/RandomNumberScreen";
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+
+import HomeScreen from './src/screens/HomeScreen';
+import ComponentsScreen from './src/screens/ComponentsScreen';
+import ListScreen from './src/screens/ListScreen';
+import ImageScreen from './src/screens/ImageScreen';
+import AnotherListScreen from './src/screens/AnotherListScreen';
+import CounterScreen from './src/screens/CounterScreen';
+import HookColorScreen from './src/screens/HookColorScreen';
+import ColorScreen from './src/screens/ColorScreen';
+import CarScreen from './src/screens/CarScreen';
+import GridViewListScreen from './src/screens/GridViewListScreen';
+import TableComponent from './src/screens/TableComponent';
+import TextStyleProps from './src/screens/TextStyleProps';
+import LayoutPropsScreen from './src/screens/LayoutPropsScreen';
+import RandomNumberScreen from './src/screens/RandomNumberScreen';
 
 const navigator = createStackNavigator(
   {
@@ -23,21 +25,21 @@ const navigator = createStackNavigator(
     Image: ImageScreen,
     AnotherList: AnotherListScreen,
     Counter: CounterScreen,
-    HookColor: ColorScreen,
+    HookColor: HookColorScreen,
+    Color: ColorScreen,
     HookCar: CarScreen,
     GridView: GridViewListScreen,
     Table: TableComponent,
     TextStyle: TextStyleProps,
-    RandomColor: RandomColorScreen,
-    RandomNumber: RandomNumberScreen
-
+    LayoutProps: LayoutPropsScreen,
+    RandomNumber: RandomNumberScreen,
   },
   {
-    initialRouteName: "Home",
+    initialRouteName: 'Home',
     defaultNavigationOptions: {
-      title: "App",
+      title: 'App',
     },
-  }
+  },
 );
 
 export default createAppContainer(navigator);

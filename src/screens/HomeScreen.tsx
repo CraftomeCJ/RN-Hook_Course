@@ -1,6 +1,6 @@
 //todo Here's the location for Parent-component "imageScreen" which with Child-component "ImageDetails" mapped to it ==> to make it visible on device.
 
-import { StyleSheet, Text, View, Button, TouchableOpacity, } from 'react-native'
+import { StyleSheet, Text, View, Button, TouchableOpacity, ScrollView} from 'react-native'
 import React from 'react'
 //using 'View' to wrap the <Text> component
 //using 'TouchableOpacity' to warp the <Button> component and it is going to be used more frequently than 'Button'
@@ -21,9 +21,11 @@ import React from 'react'
 const HomeScreen = ({navigation}: {navigation: any}) => {
 
   return (
+<ScrollView>
     <View>
 
       <Text style={styles.styleHeader}>
+
         Good day!! This is Udemy's React Native Course Home Screen
       </Text>
 
@@ -53,6 +55,11 @@ const HomeScreen = ({navigation}: {navigation: any}) => {
       />
 
       <Button
+      title="Go to useState Random Color Demo"
+      onPress={() => navigation.navigate('Color')}
+      />
+
+      <Button
       title="Go to Hook's Car Demo"
       onPress={() => navigation.navigate('HookCar')}
       />
@@ -78,8 +85,8 @@ const HomeScreen = ({navigation}: {navigation: any}) => {
       />
 
       <Button
-      title="Go to Random Color Demo"
-      onPress={() => navigation.navigate('RandomColor')}
+      title="Go to Layout Props Demo"
+      onPress={() => navigation.navigate('LayoutProps')}
       />
 
       <Button
@@ -96,6 +103,7 @@ const HomeScreen = ({navigation}: {navigation: any}) => {
       </TouchableOpacity>
 
     </View>
+</ScrollView>
   )
 }
 

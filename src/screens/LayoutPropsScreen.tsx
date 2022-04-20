@@ -1,77 +1,5 @@
-// //add the color label under the
+//example of a Layout Props with state management
 
-
-// const changeSetting = (value: number, options: string | any[], setterFunction: (arg0: number) => void) => {
-//   if (value === options.length - 1) {
-//     setterFunction(0);
-//     return;
-//   }
-//   setterFunction(value + 1);
-// }
-
-
-// 	//call the 'randomRgb' function here
-// 	return (
-
-//     <View style={{paddingTop: StatusBar.currentHeight}}/>
-//     <View style={{styles.container, styles.screenSpace, hookedStyles}}>
-//       {squares.map(elem => elem)}
-//     </View>
-
-
-
-// 		// <View>
-// 		// 	<Button
-// 		// 		title='Add a Color'
-// 		// 		onPress={() => {
-// 		// 			setColor([...color, randomRgb()]);
-// 		// 		}}
-// 		// 	/>
-// 			{/* <ScrollView>
-// 				<FlatList
-// 					keyExtractor={(item) => item.name}
-// 					data={color}
-// 					renderItem={({ item }) => {
-// 						return (
-// 							<View style={styles.listStyle}>
-// 								<View
-// 									style={{
-// 										height: 100,
-// 										width: 100,
-// 										backgroundColor: item.color,
-// 									}}
-// 								/>
-// 								<Text>{item.name}</Text>
-// 							</View>
-// 						);
-// 					}}
-// 				/>
-// 			</ScrollView> */}
-// 		</View>
-// 	);
-// };
-
-// const Square = () => (
-//   <View
-//     style={{
-//       height: 100,
-//       width: 100,
-//       backgroundColor: randomRgb(),
-//     }}
-//   />
-// );
-
-// //To generate the random color
-// const randomRgb = () => {
-// 	const red = Math.floor(Math.random() * 256);
-// 	const green = Math.floor(Math.random() * 256);
-// 	const blue = Math.floor(Math.random() * 256);
-
-//   return (`rgb(${red}, ${green}, ${blue})`);
-// };
-
-
-//example of a Generating Random Color with Layout Props
 import {
 	StyleSheet,
 	Text,
@@ -83,7 +11,7 @@ import {
 } from 'react-native';
 import React, { useState } from 'react';
 
-const RandomColorScreen = () => {
+const LayoutPropsScreen = () => {
 
   const flexDirections = [
     'row',
@@ -262,4 +190,4 @@ const randomHexColor = () => {
   });
 };
 
-export default RandomColorScreen;
+export default LayoutPropsScreen;
