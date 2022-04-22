@@ -16,6 +16,7 @@ import TableComponent from './src/screens/TableComponent';
 import TextStyleProps from './src/screens/TextStyleProps';
 import LayoutPropsScreen from './src/screens/LayoutPropsScreen';
 import RandomNumberScreen from './src/screens/RandomNumberScreen';
+import SquareScreen from './src/screens/SquareScreen';
 
 const navigator = createStackNavigator(
   {
@@ -33,6 +34,7 @@ const navigator = createStackNavigator(
     TextStyle: TextStyleProps,
     LayoutProps: LayoutPropsScreen,
     RandomNumber: RandomNumberScreen,
+    Square: SquareScreen,
   },
   {
     initialRouteName: 'Home',

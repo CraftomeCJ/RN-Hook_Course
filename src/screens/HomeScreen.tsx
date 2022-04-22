@@ -94,6 +94,10 @@ const HomeScreen = ({navigation}: {navigation: any}) => {
       onPress={() => navigation.navigate('RandomNumber')}
       />
 
+      <Button
+      title="Go to Square Screen Demo"
+      onPress={() => navigation.navigate('SquareScreen')}
+      />
 
       <TouchableOpacity
       onPress={() => navigation.navigate('Counter')}>
@@ -133,7 +137,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'lightpink'
   }
 })
-
 
 
 //LEARN Button Types
