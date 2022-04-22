@@ -26,19 +26,38 @@ const SquareScreen: React.FC = () => {
   const [red, setRed] = useState(180);
   const [green, setGreen] = useState(180);
   const [blue, setBlue] = useState(180);
+  console.log('red', red, 'green',green, 'blue',blue);
 
-  const setColor = (color: string, change: number) => {
-    //color === 'red', 'green', 'blue'
-    //change === +15, -15
-    //NOTE the useState is a function that returns an array of two values. The first value is the current state of the variable. The second value is a function that allows you to update the state of the variable.
-    if (color === 'red') {
-      if (red + change > 255 || red + change < 0) {
-        return;
-      } else {
-        setRed(red + change);
-      }
-    }
+  // //way 2 to validate the state changes <== not the best
+  // const setColor = (color: string, change: number) => {
+  //   //color === 'red', 'green', 'blue'
+  //   //change === +15, -15
+  //   //NOTE the useState is a function that returns an array of two values. The first value is the current state of the variable. The second value is a function that allows you to update the state of the variable.
+  //   if (color === 'red') {
+  //     if (red + change > 255 || red + change < 0) {
+  //       return;
+  //     } else {
+  //       setRed(red + change);
+  //     }
+  //   }
+  // }
+
+  //way 3 refactor using switch statement to validate the state changes <== best
+const setColor = (color: string, change: number): void => {
+  switch (color) {
+    case 'red':
+      red + change > 255 || red + change < 0 ? null : setRed(red + change);
+      return;
+    case 'green':
+      green + change > 255 || green + change < 0 ? null : setGreen(green + change);
+      return;
+    case 'blue':
+      blue + change > 255 || blue + change < 0 ? null : setBlue(blue + change);
+      return;
+    default:
+      return;
   }
+}
 
   // console.log(red);
   // console.log(green);
@@ -61,8 +80,8 @@ const SquareScreen: React.FC = () => {
         color="Green"/>
 
         <ColorCounter
-        onIncrease={() => setBlue(blue + COLOR_INCREMENT)}
-        onDecrease={() => setBlue(blue - COLOR_INCREMENT)}
+        onIncrease={() => setColor('blue', COLOR_INCREMENT)}
+        onDecrease={() => setColor('blue', -1 * COLOR_INCREMENT)}
         color="Blue"/>
 
         <View style={{height: 150, width: 370, backgroundColor: `rgb(${red}, ${green}, ${blue})`}}/>
