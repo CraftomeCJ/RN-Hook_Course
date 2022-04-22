@@ -19,6 +19,13 @@ import ColorCounter from '../components/ColorCounter'
 //NOTE all cap with an underscore ==> by convention it mean this is a true constant value. A sign to other engineers this is a special variable.
 const COLOR_INCREMENT = 15;
 
+//Use enum of Color for string constant
+enum Color {
+  RED = 'Red',
+  GREEN = 'Green',
+  BLUE = 'Blue'
+}
+
 const SquareScreen: React.FC = () => {
   //Convert the states of red, blue, green into a state of object with property of red, blue and green
   //useState is a function that returns an array of two values. The first value is the current state of the variable. The second value is a function that allows you to update the state of the variable.
@@ -101,7 +108,8 @@ export default SquareScreen
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    margin: 10
+    margin: 10,
+    borderRadius: 10
   },
   textStyle: {
     fontSize: 25,

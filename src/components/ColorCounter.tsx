@@ -11,7 +11,7 @@ export interface ColorCounterProps {
 }
 
 const ColorCounter = ({color, onIncrease, onDecrease}: ColorCounterProps) => {
-
+ 
   return (
     <View>
 

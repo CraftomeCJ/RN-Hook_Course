@@ -125,7 +125,7 @@ export default HomeScreen
 const styles = StyleSheet.create({
   styleHeader: {
     marginVertical: 20,
-    fontSize: 20,
+    fontSize: 40,
     color: 'yellow',
     backgroundColor: 'lightblue',
   },
