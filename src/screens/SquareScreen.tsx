@@ -31,3 +31,17 @@ const SquareScreen = () => {
 export default SquareScreen
 
 const styles = StyleSheet.create({})
+
+
+//note SquareScreen <== this need to read the three different state values
+// <== these 3 below need to change the three different states values ==>
+// ==> red
+// ==> green
+// ==> blue
+
+//important generally, we create state variables in the most parent component that needs to read or change a state value
+
+//important If a child need to read a state value, the parent can pass it down as a prop
+//note: ColorCounter doesn't need to read state values! It just needs to pass down the state values to the child
+
+//important if a child need to change the state value, the parent can pass down a callback function to change the state value as a prop "{ onChange: () => {} }"

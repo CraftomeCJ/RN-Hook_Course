@@ -1,3 +1,5 @@
+//Add ColorScreen to the parent screen of SquareScreen
+
 import { StyleSheet, Text, View, Button } from 'react-native'
 import React from 'react'
 
