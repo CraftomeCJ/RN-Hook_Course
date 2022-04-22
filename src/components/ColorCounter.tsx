@@ -3,8 +3,14 @@
 import { StyleSheet, Text, View, Button } from 'react-native'
 import React from 'react'
 
+//
+export interface ColorCounterProps {
+  color: string;
+  onIncrease: () => void;
+  onDecrease: () => void;
+}
 
-const ColorCounter = ({color, onIncrease, onDecrease}: {color: string, onIncrease: any, onDecrease: any}) => {
+const ColorCounter = ({color, onIncrease, onDecrease}: ColorCounterProps) => {
 
   return (
     <View>

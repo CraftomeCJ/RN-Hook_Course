@@ -99,6 +99,11 @@ const HomeScreen = ({navigation}: {navigation: any}) => {
       onPress={() => navigation.navigate('Square')}
       />
 
+      <Button
+      title="Go to Budget Overview Demo"
+      onPress={() => navigation.navigate('Budget')}
+      />
+
       <TouchableOpacity
       onPress={() => navigation.navigate('Counter')}>
         <Text style={styles.styleMain}>

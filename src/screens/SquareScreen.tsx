@@ -17,28 +17,47 @@ import React, {useState} from 'react'
 import ColorCounter from '../components/ColorCounter'
 
 //NOTE all cap with an underscore ==> by convention it mean this is a true constant value. A sign to other engineers this is a special variable.
-const COLOR_INCREMENT = 8;
+const COLOR_INCREMENT = 15;
 
-const SquareScreen = () => {
-  const [red, setRed] = useState(0);
-  const [green, setGreen] = useState(0);
-  const [blue, setBlue] = useState(0);
+const SquareScreen: React.FC = () => {
+  //Convert the states of red, blue, green into a state of object with property of red, blue and green
+  //useState is a function that returns an array of two values. The first value is the current state of the variable. The second value is a function that allows you to update the state of the variable.
+
+  const [red, setRed] = useState(180);
+  const [green, setGreen] = useState(180);
+  const [blue, setBlue] = useState(180);
+
+  const setColor = (color: string, change: number) => {
+    //color === 'red', 'green', 'blue'
+    //change === +15, -15
+    //NOTE the useState is a function that returns an array of two values. The first value is the current state of the variable. The second value is a function that allows you to update the state of the variable.
+    if (color === 'red') {
+      if (red + change > 255 || red + change < 0) {
+        return;
+      } else {
+        setRed(red + change);
+      }
+    }
+  }
 
   // console.log(red);
   // console.log(green);
   // console.log(blue);
 
   return (
-    <View>
-
+    <View style={styles.container}>
+ {/* way 1 <== not the best way is using if else with || && ! */}
         <ColorCounter
-        onIncrease={() => setRed(red + COLOR_INCREMENT)}
-        onDecrease={() => setRed(red - COLOR_INCREMENT)}
+        onIncrease={() => setColor('red', COLOR_INCREMENT)}
+          // if (red + COLOR_INCREMENT > 255) {
+          //   return;
+          // }
+        onDecrease={() => setColor('red', -1 * COLOR_INCREMENT)}
           color="Red"/>
 
         <ColorCounter
-        onIncrease={() => setGreen(green + COLOR_INCREMENT)}
-        onDecrease={() => setGreen(green - COLOR_INCREMENT)}
+        onIncrease={() => setColor('green', COLOR_INCREMENT)}
+        onDecrease={() => setColor('green', -1 * COLOR_INCREMENT)}
         color="Green"/>
 
         <ColorCounter
@@ -46,15 +65,32 @@ const SquareScreen = () => {
         onDecrease={() => setBlue(blue - COLOR_INCREMENT)}
         color="Blue"/>
 
-        <View style={{height: 150, width: 400, backgroundColor: `rgb(${red}, ${green}, ${blue})`}}/>
+        <View style={{height: 150, width: 370, backgroundColor: `rgb(${red}, ${green}, ${blue})`}}/>
+        <Text style={styles.textStyle}>{colorLabel(red, green, blue)}</Text>
 
     </View>
   )
 }
 
+//add the color label under the color square.
+const colorLabel = (red: number, green: number, blue: number) => {
+  return `(Red: ${red}, Green: ${green}, Blue: ${blue})`;
+}
+
 export default SquareScreen
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    margin: 10
+  },
+  textStyle: {
+    fontSize: 25,
+    color: '#00aa00',
+    textAlign: 'center',
+    paddingTop: 20,
+  },
+})
 
 
 //note SquareScreen <== this need to read the three different state values
@@ -69,3 +105,10 @@ const styles = StyleSheet.create({})
 //note: ColorCounter doesn't need to read state values! It just needs to pass down the state values to the child
 
 //important if a child need to change the state value, the parent can pass down a callback function to change the state value as a prop "{ onChange: () => {} }"
+
+//challenge:
+/*
+1. Try to add the color label under the color square.
+2. Convert the states of red, blue, green into a state of object with property of red, blue and green
+3. Try the initial state with null and fix the issue to make it work.
+*/

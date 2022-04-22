@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 import { View, StyleSheet, ScrollView } from 'react-native';
-import { Table, Row, Rows } from 'react-native-table-component';
+import { Table, Row } from 'react-native-table-component';
 
 
 //add <any, any> types to solve ts(2339) error
