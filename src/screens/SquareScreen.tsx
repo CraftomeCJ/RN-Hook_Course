@@ -16,6 +16,9 @@ import { StyleSheet, Text, View } from 'react-native'
 import React, {useState} from 'react'
 import ColorCounter from '../components/ColorCounter'
 
+//NOTE all cap with an underscore ==> by convention it mean this is a true constant value. A sign to other engineers this is a special variable.
+const COLOR_INCREMENT = 8;
+
 const SquareScreen = () => {
   const [red, setRed] = useState(0);
   const [green, setGreen] = useState(0);
@@ -29,17 +32,21 @@ const SquareScreen = () => {
     <View>
 
         <ColorCounter
-        onIncrease={() => setRed(red +1)}
-        onDecrease={() => setRed(red -1)}
+        onIncrease={() => setRed(red + COLOR_INCREMENT)}
+        onDecrease={() => setRed(red - COLOR_INCREMENT)}
           color="Red"/>
+
         <ColorCounter
-        onIncrease={() => setGreen(green +1)}
-        onDecrease={() => setGreen(green -1)}
+        onIncrease={() => setGreen(green + COLOR_INCREMENT)}
+        onDecrease={() => setGreen(green - COLOR_INCREMENT)}
         color="Green"/>
+
         <ColorCounter
-        onIncrease={() => setBlue(blue +1)}
-        onDecrease={() => setBlue(blue -1)}
+        onIncrease={() => setBlue(blue + COLOR_INCREMENT)}
+        onDecrease={() => setBlue(blue - COLOR_INCREMENT)}
         color="Blue"/>
+
+        <View style={{height: 150, width: 400, backgroundColor: `rgb(${red}, ${green}, ${blue})`}}/>
 
     </View>
   )
