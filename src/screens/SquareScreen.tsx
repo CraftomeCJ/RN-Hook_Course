@@ -14,11 +14,16 @@ Try to change the initial values of red, green and blue to see the effect.
 
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import ColorCounter from '../components/ColorCounter'
 
 const SquareScreen = () => {
   return (
     <View>
-      <Text>SquareScreen</Text>
+
+        <ColorCounter color="Red"/>
+        <ColorCounter color="Green"/>
+        <ColorCounter color="Blue"/>
+
     </View>
   )
 }

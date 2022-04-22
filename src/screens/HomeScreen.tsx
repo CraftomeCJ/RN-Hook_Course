@@ -96,7 +96,7 @@ const HomeScreen = ({navigation}: {navigation: any}) => {
 
       <Button
       title="Go to Square Screen Demo"
-      onPress={() => navigation.navigate('SquareScreen')}
+      onPress={() => navigation.navigate('Square')}
       />
 
       <TouchableOpacity
