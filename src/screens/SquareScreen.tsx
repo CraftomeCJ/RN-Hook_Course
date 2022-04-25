@@ -30,6 +30,9 @@ const SquareScreen: React.FC = () => {
   //Convert the states of red, blue, green into a state of object with property of red, blue and green
   //useState is a function that returns an array of two values. The first value is the current state of the variable. The second value is a function that allows you to update the state of the variable.
 
+/*
+//// Creating a Reducer here:
+*/
   const [red, setRed] = useState(180);
   const [green, setGreen] = useState(180);
   const [blue, setBlue] = useState(180);
