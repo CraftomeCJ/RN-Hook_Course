@@ -18,6 +18,7 @@ import LayoutPropsScreen from './src/screens/LayoutPropsScreen';
 import RandomNumberScreen from './src/screens/RandomNumberScreen';
 import SquareScreen from './src/screens/SquareScreen';
 import BudgetOverview from './src/screens/BudgetOverview';
+import ReducerSqScreen from './src/screens/ReducerSqScreen';
 
 const navigator = createStackNavigator(
   {
@@ -35,6 +36,7 @@ const navigator = createStackNavigator(
     TextStyle: TextStyleProps,
     LayoutProps: LayoutPropsScreen,
     RandomNumber: RandomNumberScreen,
+    ReducerScreen: ReducerSqScreen,
     Square: SquareScreen,
     Budget: BudgetOverview
   },
