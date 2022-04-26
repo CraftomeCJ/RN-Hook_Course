@@ -106,7 +106,7 @@ const HomeScreen = ({navigation}: {navigation: any}) => {
 
       <Button
       title="Go to Reducers Screen Demo"
-      onPress={() => navigation.navigate('ReducersScreen')}
+      onPress={() => navigation.navigate('ReducerScreen')}
       />
 
       <TouchableOpacity
