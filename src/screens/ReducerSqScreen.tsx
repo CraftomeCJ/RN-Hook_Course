@@ -9,7 +9,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React, {useReducer} from 'react'
 import ColorCounter from '../components/ColorCounter'
 
-const COLOR_INCREMENT = 15;
+const COLOR_INCREMENT = 5;
 
 /*
 1. SquareScreen App works right now - we could leave it as-is! But we could make it slightly better...
@@ -41,13 +41,14 @@ const reducer = (state: {red: number, green: number, blue: number}, action: {col
   //action.amount is the amount of color to change
 switch (action.colorToChange) {
   case 'red':
-    return {...state, red: state.red + action.amount};
+    // add Validation
+    return state.red + action.amount > 255 || state.red + action.amount < 0 ? state : {...state, red: state.red + action.amount}
   case 'green':
-    return {...state, green: state.green + action.amount};
+    return state.green + action.amount > 255 || state.green + action.amount < 0 ? state : {...state, green: state.green + action.amount}
   case 'blue':
-    return {...state, blue: state.blue + action.amount};
+    return state.blue + action.amount > 255 || state.blue + action.amount < 0 ? state : {...state, blue: state.blue + action.amount}
   default:
-    //return state;
+    return state;
 }
 };
 
@@ -109,3 +110,4 @@ const styles = StyleSheet.create({
     paddingTop: 20,
   },
 })
+
