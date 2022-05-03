@@ -32,7 +32,6 @@ const GridViewListScreen = () => {
           <GridView name={item.name} id={0} />}
       keyExtractor={(item: { id: any }) => item.id}
       numColumns={2}
-      key={(item: { id: any }) => item.id}
       />
       </SafeAreaView>
     )

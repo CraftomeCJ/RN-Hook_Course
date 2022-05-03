@@ -1,6 +1,6 @@
 //todo Here's the location for Parent-component "imageScreen" which with Child-component "ImageDetails" mapped to it ==> to make it visible on device.
 
-import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, Button, TouchableOpacity, ScrollView} from 'react-native'
 import React from 'react'
 //using 'View' to wrap the <Text> component
 //using 'TouchableOpacity' to warp the <Button> component and it is going to be used more frequently than 'Button'
@@ -21,8 +21,11 @@ import React from 'react'
 const HomeScreen = ({navigation}: {navigation: any}) => {
 
   return (
+<ScrollView>
     <View>
+
       <Text style={styles.styleHeader}>
+
         Good day!! This is Udemy's React Native Course Home Screen
       </Text>
 
@@ -52,13 +55,18 @@ const HomeScreen = ({navigation}: {navigation: any}) => {
       />
 
       <Button
+      title="Go to useState Random Color Demo"
+      onPress={() => navigation.navigate('Color')}
+      />
+
+      <Button
       title="Go to Hook's Car Demo"
       onPress={() => navigation.navigate('HookCar')}
       />
 
       <Button
       title="Go to Hook's Counter Demo"
-      onPress={() => navigation.navigate('HookCounter')}
+      onPress={() => navigation.navigate('Counter')}
       />
 
       <Button
@@ -76,6 +84,31 @@ const HomeScreen = ({navigation}: {navigation: any}) => {
       onPress={() => navigation.navigate('TextStyle')}
       />
 
+      <Button
+      title="Go to Layout Props Demo"
+      onPress={() => navigation.navigate('LayoutProps')}
+      />
+
+      <Button
+      title="Go to Random Number Demo"
+      onPress={() => navigation.navigate('RandomNumber')}
+      />
+
+      <Button
+      title="Go to Square Screen Demo"
+      onPress={() => navigation.navigate('Square')}
+      />
+
+      <Button
+      title="Go to Budget Overview Demo"
+      onPress={() => navigation.navigate('Budget')}
+      />
+
+      <Button
+      title="Go to Reducers Screen Demo"
+      onPress={() => navigation.navigate('ReducerScreen')}
+      />
+
       <TouchableOpacity
       onPress={() => navigation.navigate('Counter')}>
         <Text style={styles.styleMain}>
@@ -84,6 +117,7 @@ const HomeScreen = ({navigation}: {navigation: any}) => {
       </TouchableOpacity>
 
     </View>
+</ScrollView>
   )
 }
 
@@ -102,18 +136,17 @@ const styles = StyleSheet.create({
   },
   styleTouch: {
     marginVertical: 15,
-    fontSize: 25,
+    fontSize: 16,
     color: 'blue',
     backgroundColor: 'lightyellow',
   },
   styleMain: {
     marginVertical: 10,
-    fontSize: 20,
+    fontSize: 16,
     color: 'orange',
     backgroundColor: 'lightpink'
   }
 })
-
 
 
 //LEARN Button Types
